@@ -1,0 +1,8 @@
+
+
+kubectl create secret docker-registry dockerhub-secret \
+  --docker-username=repo name \
+  --docker-password=enter the tocken \
+  --docker-email=gmail \
+  --docker-server=https://index.docker.io/v1/ \
+  --dry-run=client -o yaml

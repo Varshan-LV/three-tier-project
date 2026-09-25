@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PetPals - Dog Shop</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #fff8f0;
+            color: #333;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            background: #5b3926;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h1 {
+            color: white;
+            font-size: 28px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 70px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #f5dfc8;
+        }
+
+        .hero-text {
+            width: 50%;
+        }
+
+        .hero-text h2 {
+            font-size: 48px;
+            color: #4b2e20;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .hero-text button {
+            padding: 13px 25px;
+            border: none;
+            border-radius: 25px;
+            background: #e67e22;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .hero img {
+            width: 400px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        /* DOGS */
+
+        .dogs {
+            padding: 60px 8%;
+        }
+
+        .dogs h2 {
+            text-align: center;
+            font-size: 32px;
+            color: #4b2e20;
+            margin-bottom: 35px;
+        }
+
+        .dog-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .dog-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .dog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .dog-card h3 {
+            margin: 15px 0 8px;
+            color: #4b2e20;
+        }
+
+        .dog-card p {
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .dog-card button {
+            background: #5b3926;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        /* ABOUT */
+
+        .about {
+            background: #f5dfc8;
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .about h2 {
+            color: #4b2e20;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: #4b2e20;
+            margin-bottom: 25px;
+        }
+
+        .contact form {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .contact textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .contact button {
+            padding: 13px 30px;
+            background: #e67e22;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #5b3926;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <h1>🐾 PetPals</h1>
+
+    <ul>
+
+        <li>
+            <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#dogs">Dogs</a>
+        </li>
+
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-text">
+
+        <h2>
+            Find Your Perfect Dog 🐶
+        </h2>
+
+        <p>
+            Welcome to PetPals!
+            Find your perfect furry friend
+            and bring happiness into your home.
+        </p>
+
+        <button onclick="location.href='#dogs'">
+            Explore Dogs
+        </button>
+
+    </div>
+
+
+    <img
+        src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=700&q=80"
+        alt="Dog"
+    >
+
+</section>
+
+
+<!-- ================= DOGS ================= -->
+
+<section class="dogs" id="dogs">
+
+    <h2>
+        Our Dogs 🐕
+    </h2>
+
+
+    <div class="dog-container">
+
+
+        <div class="dog-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=500&q=80"
+                alt="Golden Retriever"
+            >
+
+            <h3>
+                Golden Retriever
+            </h3>
+
+            <p>
+                Friendly & Playful
+            </p>
+
+            <button>
+                View Details
+            </button>
+
+        </div>
+
+
+        <div class="dog-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=500&q=80"
+                alt="Labrador"
+            >
+
+            <h3>
+                Labrador
+            </h3>
+
+            <p>
+                Loyal & Intelligent
+            </p>
+
+            <button>
+                View Details
+            </button>
+
+        </div>
+
+
+        <div class="dog-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1583511655826-05700442b31b?auto=format&fit=crop&w=500&q=80"
+                alt="Bulldog"
+            >
+
+            <h3>
+                French Bulldog
+            </h3>
+
+            <p>
+                Friendly & Cute
+            </p>
+
+            <button>
+                View Details
+            </button>
+
+        </div>
+
+
+        <div class="dog-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=500&q=80"
+                alt="Beagle"
+            >
+
+            <h3>
+                Beagle
+            </h3>
+
+            <p>
+                Active & Loving
+            </p>
+
+            <button>
+                View Details
+            </button>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+    <h2>
+        About PetPals
+    </h2>
+
+    <p>
+
+        PetPals helps families find loving,
+        healthy and friendly dogs.
+        Our goal is to connect every dog
+        with a happy home.
+
+    </p>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+    <h2>
+        Contact Us 📩
+    </h2>
+
+
+    <form onsubmit="sendMessage(event)">
+
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Your Name"
+            required
+        >
+
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Your Email"
+            required
+        >
+
+
+        <textarea
+            id="message"
+            placeholder="Your Message"
+            required
+        ></textarea>
+
+
+        <button type="submit">
+            Send Message
+        </button>
+
+
+    </form>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        © 2026 PetPals Dog Shop
+    </p>
+
+</footer>
+
+
+
+<!-- ================================================= -->
+<!-- BACKEND CONNECTION - SCREENSHOT MODEL -->
+<!-- ================================================= -->
+
+<script>
+
+async function sendMessage(e) {
+
+    e.preventDefault();
+
+
+    const data = {
+
+        name: document.getElementById("name").value,
+
+        email: document.getElementById("email").value,
+
+        message: document.getElementById("message").value
+
+    };
+
+
+    try {
+
+
+        const res = await fetch(
+            "http://15.206.172.209:30050/contact",
+            {
+
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify(data)
+
+            }
+        );
+
+
+        const result = await res.json();
+
+
+        alert(
+            "Thank you for contacting PetPals! 🐶"
+        );
+
+
+        console.log(result);
+
+
+    } catch (error) {
+
+
+        alert(
+            "Error sending message. Please try again."
+        );
+
+
+        console.error(error);
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>
+
+
